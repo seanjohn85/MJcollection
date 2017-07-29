@@ -35,6 +35,8 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         mj.image = UIImagePNGRepresentation(image.image!) as! NSData
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
+        navigationController?.popViewController(animated: true)
+        
     }
     
     
