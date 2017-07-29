@@ -13,6 +13,8 @@
 		C94D095C1F2BF13E004EE8F1 /* MJCollection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94D095A1F2BF13E004EE8F1 /* MJCollection.xcdatamodeld */; };
 		C94D095E1F2BF13E004EE8F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94D095D1F2BF13E004EE8F1 /* Assets.xcassets */; };
 		C94D09611F2BF13E004EE8F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94D095F1F2BF13E004EE8F1 /* LaunchScreen.storyboard */; };
+		C94D09691F2C9B32004EE8F1 /* mj.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C94D09681F2C9B32004EE8F1 /* mj.jpg */; };
+		C94D096B1F2C9C4C004EE8F1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94D096A1F2C9C4C004EE8F1 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C94D095D1F2BF13E004EE8F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C94D09601F2BF13E004EE8F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C94D09621F2BF13E004EE8F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C94D09681F2C9B32004EE8F1 /* mj.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mj.jpg; sourceTree = "<group>"; };
+		C94D096A1F2C9C4C004EE8F1 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				C94D09531F2BF13E004EE8F1 /* AppDelegate.swift */,
 				C94D09551F2BF13E004EE8F1 /* ViewController.swift */,
+				C94D09681F2C9B32004EE8F1 /* mj.jpg */,
 				C94D09571F2BF13E004EE8F1 /* Main.storyboard */,
+				C94D096A1F2C9C4C004EE8F1 /* AddViewController.swift */,
 				C94D095D1F2BF13E004EE8F1 /* Assets.xcassets */,
 				C94D095F1F2BF13E004EE8F1 /* LaunchScreen.storyboard */,
 				C94D09621F2BF13E004EE8F1 /* Info.plist */,
@@ -127,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94D09691F2C9B32004EE8F1 /* mj.jpg in Resources */,
 				C94D09611F2BF13E004EE8F1 /* LaunchScreen.storyboard in Resources */,
 				C94D095E1F2BF13E004EE8F1 /* Assets.xcassets in Resources */,
 				C94D09591F2BF13E004EE8F1 /* Main.storyboard in Resources */,
@@ -142,6 +149,7 @@
 			files = (
 				C94D09561F2BF13E004EE8F1 /* ViewController.swift in Sources */,
 				C94D09541F2BF13E004EE8F1 /* AppDelegate.swift in Sources */,
+				C94D096B1F2C9C4C004EE8F1 /* AddViewController.swift in Sources */,
 				C94D095C1F2BF13E004EE8F1 /* MJCollection.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
