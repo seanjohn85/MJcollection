@@ -48,6 +48,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.imageView?.image = UIImage(data: mj.image as! Data)
         return cell
     }
+    
+    //cell tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mj = objs[indexPath.row]
+        performSegue(withIdentifier: "edit", sender: mj)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let next = segue.destination as! AddViewController
+        next.mj = sender as? MJ
+    }
 
 }
 

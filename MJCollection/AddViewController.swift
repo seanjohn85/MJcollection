@@ -10,7 +10,12 @@ import UIKit
 
 class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var mj : MJ? = nil
     
+    
+    @IBOutlet var deletebut: UIButton!
+    
+    @IBOutlet var addbut: UIButton!
     
     @IBOutlet var image: UIImageView!
     
@@ -22,18 +27,39 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if (mj != nil){
+           
+            print("edit screen")
+            image.image = UIImage(data: mj?.image as! Data)
+            name.text = mj?.name
+            addbut.setTitle("Update", for: .normal)
+        }else{
+            deletebut.isHidden = true
+    
+        }
 
         picker.delegate = self
     }
 
     //add the element
     @IBAction func addMJ(_ sender: Any) {
+        if (mj == nil){
+            let ctx = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let mj = MJ(context: ctx)
+            mj.name = name.text
+            mj.image = UIImagePNGRepresentation(image.image!) as! NSData
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+        }else{
+            mj!.name = name.text
+            mj!.image = UIImagePNGRepresentation(image.image!) as! NSData
+            
+        }
         
-        let ctx = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let mj = MJ(context: ctx)
-        mj.name = name.text
-        mj.image = UIImagePNGRepresentation(image.image!) as! NSData
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        
         
         navigationController?.popViewController(animated: true)
         
@@ -59,5 +85,16 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             picker.dismiss(animated: true, completion: nil)
         
     }
+    
+    
+    
+    @IBAction func deletebtn(_ sender: Any) {
+        let ctx = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        ctx.delete(mj!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
     
 }
